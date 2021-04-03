@@ -8,8 +8,8 @@ const productController = {
     const fetchSuccess = await this.fetchData()
     if (!fetchSuccess) return;
 
-    gallery.render(this.data.images)
     detail.render(this.data)
+    gallery.render(this.data.images)
   },
   async fetchData() {
     try {
