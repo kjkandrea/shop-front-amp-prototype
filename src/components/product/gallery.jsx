@@ -1,4 +1,5 @@
 import createElement from '../../utils/element'
+import { fitToScreen } from '../../assets/styles/common'
 
 class Gallery {
   template(images) {
@@ -7,7 +8,7 @@ class Gallery {
         <ul>
           {images.map(({ name, src }) => (
             <li>
-              <img src={src} alt={name} />
+              <img className={fitToScreen} src={src} alt={name} />
             </li>
           ))}
         </ul>
