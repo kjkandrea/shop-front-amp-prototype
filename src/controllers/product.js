@@ -1,5 +1,6 @@
 import { products } from '../api'
 import detail from '../components/product/detail.jsx'
+import gallery from '../components/product/gallery.jsx'
 
 const productController = {
   data: null,
@@ -7,6 +8,7 @@ const productController = {
     const fetchSuccess = await this.fetchData()
     if (!fetchSuccess) return;
 
+    gallery.render(this.data.images)
     detail.render(this.data)
   },
   async fetchData() {
