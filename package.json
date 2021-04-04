@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
-    "reset-css": "^5.0.1"
+    "reset-css": "^5.0.1",
+    "tiny-slider": "^2.9.3"
   }
 }
