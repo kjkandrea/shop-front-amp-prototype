@@ -29,11 +29,6 @@ module.exports = {
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
         loader: 'url-loader',
-        options: {
-          publicPath: '../dist/',
-          name: '[name].[ext]?[hash]',
-          limit: 20000, // 20kb
-        },
       },
       {
         test: /\.(js|jsx)$/,
