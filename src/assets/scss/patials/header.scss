@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  height: 44px;
+  border-bottom: 1px solid #ccc;
+
+  .logo {
+    display: inline-flex;
+    padding: 5px;
+
+    img {
+      width: 30px;
+    }
+  }
+}

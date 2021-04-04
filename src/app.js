@@ -4,8 +4,8 @@ import 'reset-css'
 import './app.scss'
 
 document.addEventListener('DOMContentLoaded', () => {
-  const app = document.getElementById('app')
-  if(!app) return;
+  const isAmpPage = window.location.pathname.includes('amp')
+  if(isAmpPage) return;
   headerController.init()
   productController.init()
 })

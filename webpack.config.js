@@ -29,6 +29,11 @@ module.exports = {
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
         loader: 'url-loader',
+        options: {
+          publicPath: '../dist/',
+          name: '[name].[ext]?[hash]',
+          limit: 0,
+        },
       },
       {
         test: /\.(js|jsx)$/,
@@ -43,8 +48,9 @@ module.exports = {
       inject: 'body'
     }),
     new HtmlWebPackPlugin({
-      filename: 'amp.html',
+      filename: './amp/index.html',
       template: './src/amp/index.html',
+      inject: 'body'
     })
   ]
 }
