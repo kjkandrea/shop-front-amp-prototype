@@ -2,7 +2,8 @@ import header from '../components/common/header.jsx'
 
 const headerController = {
   init() {
-    header.render()
+    const headerContainer = document.getElementById('header')
+    if (headerContainer) header.render(headerContainer)
   },
 }
 

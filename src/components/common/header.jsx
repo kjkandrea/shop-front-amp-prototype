@@ -27,10 +27,7 @@ const header = {
       </a>
     </header>
   ),
-  render() {
-    console.log('header render')
-    document.getElementById('header').append(this.template())
-  }
+  render: el => el.append(header.template())
 }
 
 export default header
