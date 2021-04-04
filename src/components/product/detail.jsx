@@ -1,6 +1,7 @@
 import createElement from '../../utils/element'
 import { css } from 'goober'
 import { addCommas } from '../../utils/replace'
+import starRated from './part/starRated.jsx'
 
 const Styled = {
   Detail: css`
@@ -26,7 +27,7 @@ const Styled = {
 
 const detail = {
   priceUnit: '원',
-  template: ({ name, regular_price, sale_price }) => (
+  template: ({ name, regular_price, sale_price, rating_count }) => (
     <div className={Styled.Detail}>
       <h2>{name}</h2>
       <dl>
@@ -35,6 +36,8 @@ const detail = {
           <del>{addCommas(regular_price)}{detail.priceUnit}</del>
           <strong>{addCommas(sale_price)}{detail.priceUnit}</strong>
         </dd>
+        <dt>평가</dt>
+        <dd>{starRated.render(rating_count)}</dd>
       </dl>
     </div>
 ),
