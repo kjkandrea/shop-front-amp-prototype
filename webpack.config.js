@@ -46,6 +46,10 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: './src/index.html',
       inject: 'body'
+    }),
+    new HtmlWebPackPlugin({
+      filename: 'amp.html',
+      template: './src/amp/index.html',
     })
   ]
 }
